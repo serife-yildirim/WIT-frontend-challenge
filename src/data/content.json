@@ -1,0 +1,140 @@
+{
+    "tr-TR": {
+      "greet": "Selamlar! 😊",
+
+      "article": "Ben Şerife. Ziyaretiniz için teşekkür ederim! Turizm ve otelcilik alanındaki tecrübelerimin ardından, kariyerime Front-End geliştirme alanında yeni bir yön verdim. Modern teknolojilerle kullanıcı odaklı uygulamalar geliştiren bir yazılımcı olarak, öğrenmeye ve üretmeye devam ediyorum.",
+      "communication": "Benimle yukarıda bulunan profillerim üzerinden üzerinden iletişime geçebilirsiniz",
+      "skill": "Yeteneklerim",
+      "profileHeader": "Profil",
+      "profile": "Kişisel Bilgilerim",
+      "info": [
+        { "name": "Doğum Tarihi", "value": "10.10.1994" },
+        { "name": "İkamet Yeri", "value": "Bursa,Türkiye" },
+        {
+          "name": "Eğitim Durumu",
+          "value": "Antalya Bilim Üniversitesi, Turizm ve Otel İşletmeciliği (%100 İngilizce), Lisans,2018"
+        },
+        {
+          "name": "Tercih Edilen Roller",
+          "value": "Front-End Developer, Müşteri Destek"
+        }
+      ],
+      "aboutTitle": "Hakkımda",
+      "about": "Turizm ve otel yönetimi alanındaki profesyonel kariyerimin ardından, teknolojiye olan ilgimle Front-End geliştirme alanına yöneldim. React, Redux, Tailwind CSS ve JavaScript gibi modern teknolojilerle kullanıcı odaklı ve etkileşimli web uygulamaları oluşturuyorum.Rixos Hotels Dubai'deki dijital pazarlama stajım, insan kaynakları deneyimlerim ve Türkiye Yeşilay Cemiyeti’nde halkla ilişkiler uzmanı olarak edindiğim iletişim ve problem çözme becerilerimle farklı disiplinlerde güçlü bir altyapıya sahibim. Ayrıca, Amazon ve Etsy gibi platformlarda e-ticaret tecrübelerimle online iş dünyasında aktif rol aldım.",
+      "about2": "Öğrenmeye ve yeniliklere açık bir yapıya sahibim. Edindiğim tecrübeleri, modern yazılım teknolojileriyle birleştirerek yaratıcı çözümler üretmeyi hedefliyorum.",
+      "projectHeader": "Projelerim",
+      "projects": [
+        {
+          "name": "Witflix - Netflix Klon",
+          "vercelLink": "https://vercel.com/",
+          "gitLink": "https://github.com/serife-yildirim",
+          "description": "Netflix'in profil seçimi, ana sayfası ve dizayn elemanlarının statik olarak HTML ve CSS ile tasarlanmasıdır.",
+          "skill": ["html", "css", "responsive design"],
+          "photoUrl": "/Witflix.png"
+        },
+        {
+          "name": "Pizza Sipariş Sitesi",
+          "vercelLink": "https://vercel.com/",
+          "gitLink": "https://github.com/serife-yildirim",
+          "description": "React ile dinamik şekilde yapılmış olup, Axios ile post işlemi gerçekleştirilmiştir. 3 componentten oluşan bir single page application yapısındadır.Form kısmında uygunluk validasyonları kontrol edilmekte ve veriler buna göre post edilmektedir.",
+          "skill": [
+            "html",
+            "javascript",
+            "css",
+            "react",
+            "hooks",
+            "axios"
+          ],
+          "photoUrl": "/Pizza.png"
+        }
+      ],
+      "show": "GitHub'da görüntüle",
+      "application": "Uygulamaya git "
+    },
+    "en-EN": {
+      "greet": "Hello! 😊",
+
+      "article": "I’m Şerife. Thank you for visiting! After gaining experience in tourism and hospitality, I have shifted my career towards Front-End development. As a developer creating user-focused applications with modern technologies, I continue to learn and build innovative solutions.",
+      "communication": "You can contact me through my profiles above",
+      "skill": "My Skills",
+      "profileHeader": "Profile",
+      "profile": "Personal Information",
+      "info": [
+        { "name": "Birthday", "value": "10.10.1994" },
+        { "name": "Location", "value": "Bursa, Turkey" },
+        {
+          "name": "Education",
+          "value": "Antalya Bilim University, Tourism and Hotel Management (100% English), Bachelor's, 2018"
+        },
+        {
+          "name": "Preferred Roles",
+          "value": "Front-End Developer, Customer Support"
+        }
+      ],
+      "aboutTitle": "About Me",
+      "about": "After a professional career in tourism and hotel management, I turned my passion for technology into a focus on Front-End development. I create user-centric and interactive web applications using modern technologies like React, Redux, Tailwind CSS, and JavaScript.My internship in digital marketing at Rixos Hotels Dubai, along with my experience in human resources and as a Public Relations Specialist at the Turkish Green Crescent, has equipped me with strong communication and problem-solving skills across various disciplines. Additionally, my e-commerce experience on platforms like Amazon and Etsy has allowed me to actively engage in the online business world.",
+      "about2": "I am always open to learning and innovation. My goal is to combine my experiences with modern software technologies to create creative and effective solutions.",
+      "projectHeader": "Projects",
+      "projects": [
+        {
+          "name": "Witflix - Netflix Clone",
+          "vercelLink": "https://vercel.com/",
+          "gitLink": "https://github.com/serife-yildirim",
+          "description": "The static design of Netflix’s profile selection, homepage, and design elements using HTML and CSS.",
+          "skill": ["html", "css", "responsive design"],
+          "photoUrl": "/Witflix.png"
+        },
+        {
+          "name": "Pizza Order Website",
+          "vercelLink": "https://vercel.com/",
+          "gitLink": "https://github.com/serife-yildirim",
+          "description": "A dynamic order page created for a pizza company. It is built with React and Axios to handle POST requests. It is a single-page application consisting of 3 components. Form validation checks the input before posting the data.",
+          "skill": [
+            "html",
+            "javascript",
+            "css",
+            "react",
+            "hooks",
+            "axios"
+          ],
+          "photoUrl": "/Pizza.png"
+        }
+      ],
+      "show": "View on GitHub",
+      "application": "Go to Application "
+    },
+    "common": {
+      "colors": ["#DDEEFE", "#D9F6F1", "#f7c1d5"],
+      "skills": [
+        {
+          "name": "JavaScript",
+          "url": "https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+        },
+        {
+          "name": "HTML",
+          "url": "https://cdn.worldvectorlogo.com/logos/html-1.svg"
+        },
+        {
+          "name": "CSS",
+          "url": "https://cdn.worldvectorlogo.com/logos/css-3.svg"
+        },
+        {
+          "name": "React",
+          "url": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+        },
+        {
+          "name": "Redux",
+          "url": "https://cdn.worldvectorlogo.com/logos/redux.svg"
+        },
+        {
+          "name": "Tailwind",
+          "url": "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg"
+        },
+        {
+          "name": "Bootstrap",
+          "url": "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg"
+        }
+      ]
+    }
+  }
+  

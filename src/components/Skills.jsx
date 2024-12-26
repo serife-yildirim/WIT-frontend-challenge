@@ -1,18 +1,35 @@
-export default function Skills() {
-    const skills = ['JavaScript', 'React.Js', 'Node.Js'];
-  
-    return (
-      <section className="p-4">
-        <h2 className="text-2xl font-bold mb-4">Skills</h2>
-        <div className="grid grid-cols-3 gap-4">
-          {skills.map(skill => (
-            <div key={skill} className="p-4 border rounded shadow-sm">
-              <h3 className="text-xl font-semibold">{skill}</h3>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+import { useContext } from "react";
+import { DataContext } from "../context/Context";
+
+const Skills = () => {
+  const { common, localizedData } = useContext(DataContext);
+  return (
+    <div className=" mt-5 pb-10 relative px-10 lg:px-0 ">
+      <div className="flex flex-col mx-auto max-w-4xl mt-10">
+        <div className="w-[11.3125rem] h-[3.0625rem] absolute top-[0] left-[-4.375rem] gap-0 rounded-[1.84375rem] z-10 bg-[#525252] opacity-80"></div>
+        <div className="mx-auto text-4xl mb-10 z-50">
+          <h2>{localizedData.skill}</h2>
+        </div>
+        <div className="flex container place-content-between text-center my-10 flex-wrap gap-5 lg:flex-nowrap">
+          {common.skills.map((skill, index) => (
+            <div
+              className="rounded-xl w-32 hover:shadow-[#EA2678_5px_2px_20px] "
+              key={index}
+            >
+              <img
+                src={skill.url}
+                alt={skill.name}
+                className="w-14 h-14 mb-3 inline-flex"
+              />
+              <p className="text-2xl font-medium text-neutral-500">
+                {skill.name}
+              </p>
             </div>
           ))}
         </div>
-      </section>
-    );
-  }
-  
+      </div>
+    </div>
+  );
+};
+
+export default Skills;
