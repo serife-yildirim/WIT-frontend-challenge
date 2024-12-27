@@ -2,80 +2,132 @@ import React, { useContext } from "react";
 import { DataContext } from "../context/Context";
 
 function Projects() {
-  const { localizedData, common } = useContext(DataContext);
+  const { localizedData, language } = useContext(DataContext); // Dil kontrolü için `language` kullanılıyor
 
-  // Tailwind CSS renklerini manuel olarak sabit bir dizide tanımlıyoruz.
-  const backgroundColors = ["bg-blue-200", "bg-green-200", "bg-pink-200"];
+  // Tailwind CSS renkleri
+  const backgroundColors = [
+    "bg-[#ddeefe] dark:bg-[#2d3235]", // Witflix
+    "bg-[#d9f6f1] dark:bg-[#495351]", // Pizza Projesi
+  ];
 
   return (
-    <div className="mt-5 pb-20">
-      <div className="flex flex-col container">
-        <div className="mx-auto mt-10">
-          <h2 className="text-4xl mb-10">{localizedData.projectHeader}</h2>
+    <div className="mt-16 pb-20 bg-white dark:bg-[#484148] dark:text-white">
+      <div className="container mx-auto px-6">
+        {/* Başlık */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-black dark:text-white">
+            {localizedData.projectHeader}
+          </h2>
         </div>
-        <div className="flex container flex-wrap-reverse lg:flex-nowrap gap-y-20 gap-x-5 place-content-around lg:gap-10">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {localizedData.projects.map((project, index) => (
             <div
               key={index}
-              // Use a valid className string with proper syntax
-              className={`h-[670px] relative flex-1 flex flex-col p-10 basis-[30%] rounded-lg shadow-md ${
+              className={`flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 ${
                 backgroundColors[index % backgroundColors.length]
               }`}
             >
-              <div>
-                <h3 className="text-3xl font-bold font-playfair leading-10">
+              {/* Üst Kısım: Metin İçeriği */}
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-2xl font-semibold mb-4 text-black dark:text-white">
                   {project.name}
                 </h3>
-              </div>
-
-              <div>
-                <p className="text-black mt-1 text-base font-normal leading-6">
+                <p className="text-base text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                   {project.description}
                 </p>
-              </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+  {project.skill.map((skill, skillIndex) => (
+    <span
+      key={skillIndex}
+      className="px-3 py-1 text-sm font-medium bg-[#525252] text-white rounded-full"
+    >
+      {skill}
+    </span>
+  ))}
+</div>
 
-              <div className="mt-4">
-                <div className="flex gap-3 mt-5 flex-wrap place-content-start">
-                  {project.skill.map((skill, skillIndex) => (
-                    <div
-                      key={skillIndex}
-                      className="text-black text-base font-bold leading-[16px] tracking-[0.05em] font-playfair bg-white px-2.5 py-1.5 rounded-full"
-                    >
-                      {skill}
-                    </div>
-                  ))}
-                </div>
+                <div className="flex justify-between items-center mt-auto">
+  <a
+    href={project.gitLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-500 dark:text-white hover:underline"
+  >
+    View on Github
+  </a>
+  <a
+    href={project.vercelLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-500 dark:text-white hover:underline"
+  >
+    Go to app →
+  </a>
+</div>
               </div>
-
-              <div className="flex mt-5 place-content-between">
-                <div>
-                  <a
-                    href={project.gitLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[20px] font-inter font-semibold leading-[30px] text-black hover:underline"
-                  >
-                    {localizedData.show}
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href={project.vercelLink}
-                    target="_blank"
-                    className="text-[20px] font-inter font-semibold leading-[30px] text-black hover:underline"
-                  >
-                    {localizedData.application} →
-                  </a>
-                </div>
+              {/* Alt Kısım: Görsel */}
+              <div className="bg-white dark:bg-[#484148]">
+                <img
+                  src={project.photoUrl}
+                  alt={project.name}
+                  className="w-130 h-auto object-contain mx-auto"
+                />
               </div>
-
-              <img
-                className="absolute bottom-[-3rem] left-0 right-0"
-                src={project.photoUrl}
-                alt="Project Thumbnail"
-              />
             </div>
           ))}
+        </div>
+        {/* Footer */}
+        <div className="text-center mt-16">
+          {language === "tr" ? ( // Türkçe için
+             <p className="text-lg text-black dark:text-white leading-8">
+             Projelerinizde{" "}
+             <span className="underline decoration-[#82bbff] decoration-[6px] font-bold">
+               birlikte
+             </span>{" "}
+             çalışalım.
+           </p>
+          ) : (
+            // İngilizce için
+            <p className="text-3xl text-black dark:text-white leading-8">
+        Let’s{" "}
+        <span className="underline decoration-[#82bbff] decoration-[6px] font-bold">
+          work together
+        </span>{" "}
+        on your projects.
+      </p>
+          )}
+          {/* Linkler */}
+          <div className="mt-6 space-x-6">
+            <a
+              href="https://github.com/serife-yildirim"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1769ff] font-medium hover:underline"
+            >
+              Github
+            </a>
+            <a
+              href="#"
+              className="text-black dark:text-white font-medium hover:underline"
+            >
+              Personal Blog
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#499dc9] font-medium hover:underline"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:serifeozyurek-94@hotmail.com"
+              className="text-[#c5507b] font-medium hover:underline"
+            >
+              Email
+            </a>
+          </div>
         </div>
       </div>
     </div>

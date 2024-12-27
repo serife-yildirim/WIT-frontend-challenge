@@ -97,8 +97,18 @@ const Header = () => {
             </div>
 
             <div className="text-lg dark:text-darkText mt-4">
-              Benimle yukarıda bulunan{" "}
-              <span className="text-[#EA2678]">profillerim üzerinden</span> iletişime geçebilirsiniz
+              {language === "en-EN" ? (
+                <>
+                  You can contact me{" "}
+                  <span className="text-[#EA2678]">through my profiles</span> above.
+                </>
+              ) : (
+                <>
+                  Benimle yukarıda bulunan{" "}
+                  <span className="text-[#EA2678]">profillerim üzerinden</span> iletişime
+                  geçebilirsiniz
+                </>
+              )}
             </div>
           </article>
           <div className="relative max-w-96 max-h-96 overflow-hidden rounded-xl shadow-[#EA2678_-20px_-20px]">
