@@ -27,6 +27,27 @@ export const DataProvider = ({ children }) => {
     }
   }, [language]);
 
+    // Dark Mode Yönetimi
+    const [darkMode, setDarkMode] = useState(() => {
+      return localStorage.getItem("darkMode") === "true";
+    });
+
+    const toggleDarkMode = () => {
+      const newDarkMode = !darkMode;
+      setDarkMode(newDarkMode);
+      localStorage.setItem("darkMode", newDarkMode);
+      document.documentElement.classList.toggle("dark", newDarkMode); // Tailwind'in 'dark' sınıfını kontrol eder
+    };
+  
+    useEffect(() => {
+      if (darkMode) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    }, [darkMode]);
+
+    // Hata Yönetimi ve API İletişimi
   const [error, setError] = useState(null);
   useEffect(() => {
     axios
@@ -58,6 +79,7 @@ export const DataProvider = ({ children }) => {
       });
   }, []);
 
+  // Context Değerleri
   return (
     <DataContext.Provider
       value={{
@@ -66,6 +88,8 @@ export const DataProvider = ({ children }) => {
         localizedData: data[language],
         common: data.common,
         error,
+        darkMode, // Dark Mode state
+        toggleDarkMode, // Dark Mode değiştirici
       }}
     >
       {children}
