@@ -10,20 +10,27 @@ function Projects() {
   ];
 
   return (
-    <div className="mt-16 pb-20 bg-white dark:bg-[#484148] dark:text-white">
+    <div className="pb-20 bg-white dark:bg-darkBackgroundAlt dark:text-white">
+      {/* Üst Boşluk */}
+      <div className="w-full h-16 bg-white dark:bg-darkBackgroundAlt"></div>
+
+      {/* Container */}
       <div className="container mx-auto px-6">
+        {/* Başlık */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-black dark:text-white">
             {localizedData.projectHeader}
           </h2>
         </div>
 
+        {/* Proje Kartları */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {localizedData.projects.map((project, index) => (
             <div
               key={index}
               className={`flex flex-col ${backgroundColors[index % backgroundColors.length]} rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105`}
             >
+              {/* Proje Detayları */}
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-2xl font-semibold mb-4 text-black dark:text-white">
                   {project.name}
@@ -35,7 +42,7 @@ function Projects() {
                   {project.skill.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="px-3 py-1 text-sm font-medium bg-white text-black rounded-full"
+                      className="px-3 py-1 text-sm font-medium bg-white text-black dark:bg-[#495351] dark:text-gray-200 rounded-full"
                     >
                       {skill}
                     </span>
@@ -46,7 +53,7 @@ function Projects() {
                     href={project.gitLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#1769ff] dark:text-white hover:underline"
+                    className="text-[#1769ff] dark:text-[#82BBFF] hover:underline"
                   >
                     {localizedData.show}
                   </a>
@@ -54,24 +61,27 @@ function Projects() {
                     href={project.vercelLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#1769ff] dark:text-white hover:underline"
+                    className="text-[#1769ff] dark:text-[#82BBFF] hover:underline"
                   >
-                    {localizedData.application}
+                    {localizedData.application} →
                   </a>
                 </div>
               </div>
+
+              {/* Proje Görseli */}
               <div className="bg-white dark:bg-[#484148] flex justify-center items-center p-4">
                 <img
                   src={project.photoUrl}
                   alt={project.name}
-                  className="w-[500px] h-[287px] object-cover rounded-lg shadow-md"
+                  className="w-[500px] h-[287px] object-cover rounded-lg"
                 />
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+        {/* Footer */}
+        <div className="mt-32 flex flex-col md:flex-row items-center justify-center text-center md:text-left">
           <div className="w-full md:w-auto md:mr-16">
             {language === "tr-TR" ? (
               <p className="font-inter font-medium text-[42px] leading-[63px] tracking-[0.01em] text-[#0A0A14] dark:text-white text-center md:text-left">
@@ -92,6 +102,7 @@ function Projects() {
             )}
           </div>
 
+          {/* Bağlantılar */}
           <div className="flex flex-col items-center md:items-start space-y-0 mt-6 md:mt-0">
             <a
               href="https://github.com/serife-yildirim"

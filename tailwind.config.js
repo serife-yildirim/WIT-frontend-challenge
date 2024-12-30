@@ -6,8 +6,10 @@ module.exports = {
       colors: {
       primary: '#EA2678', 
       secondary: '#525252',
-      background: '#F3F4F6', 
-      darkBackground: '#1E1E1E', // Dark mode arka plan rengi
+      background: '#F3F4F6',
+      backgroundLight: '#F4F4F4', 
+      darkBackground: '#2A262B', // Dark mode arka plan rengi
+      darkBackgroundAlt: '#484148', // İkinci dark mode arka plan rengi
       darkText: '#FFFFFF', // Dark mode metin rengi
     },
     boxShadow: {
