@@ -2,33 +2,28 @@ import React, { useContext } from "react";
 import { DataContext } from "../context/Context";
 
 function Projects() {
-  const { localizedData, language } = useContext(DataContext); // Dil kontrolü için `language` kullanılıyor
+  const { localizedData, language } = useContext(DataContext);
 
-  // Tailwind CSS renkleri
   const backgroundColors = [
-    "bg-[#ddeefe] dark:bg-[#2d3235]", // Witflix
-    "bg-[#d9f6f1] dark:bg-[#495351]", // Pizza Projesi
+    "bg-[#ddeefe] dark:bg-[#2d3235]", 
+    "bg-[#d9f6f1] dark:bg-[#495351]",
   ];
 
   return (
     <div className="mt-16 pb-20 bg-white dark:bg-[#484148] dark:text-white">
       <div className="container mx-auto px-6">
-        {/* Başlık */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-black dark:text-white">
             {localizedData.projectHeader}
           </h2>
         </div>
-        {/* Grid */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {localizedData.projects.map((project, index) => (
             <div
               key={index}
-              className={`flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 ${
-                backgroundColors[index % backgroundColors.length]
-              }`}
+              className={`flex flex-col ${backgroundColors[index % backgroundColors.length]} rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105`}
             >
-              {/* Üst Kısım: Metin İçeriği */}
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-2xl font-semibold mb-4 text-black dark:text-white">
                   {project.name}
@@ -37,79 +32,78 @@ function Projects() {
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-  {project.skill.map((skill, skillIndex) => (
-    <span
-      key={skillIndex}
-      className="px-3 py-1 text-sm font-medium bg-[#525252] text-white rounded-full"
-    >
-      {skill}
-    </span>
-  ))}
-</div>
-
+                  {project.skill.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="px-3 py-1 text-sm font-medium bg-white text-black rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
                 <div className="flex justify-between items-center mt-auto">
-  <a
-    href={project.gitLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-blue-500 dark:text-white hover:underline"
-  >
-    View on Github
-  </a>
-  <a
-    href={project.vercelLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-blue-500 dark:text-white hover:underline"
-  >
-    Go to app →
-  </a>
-</div>
+                  <a
+                    href={project.gitLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#1769ff] dark:text-white hover:underline"
+                  >
+                    {localizedData.show}
+                  </a>
+                  <a
+                    href={project.vercelLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#1769ff] dark:text-white hover:underline"
+                  >
+                    {localizedData.application}
+                  </a>
+                </div>
               </div>
-              {/* Alt Kısım: Görsel */}
-              <div className="bg-white dark:bg-[#484148]">
+              <div className="bg-white dark:bg-[#484148] flex justify-center items-center p-4">
                 <img
                   src={project.photoUrl}
                   alt={project.name}
-                  className="w-130 h-auto object-contain mx-auto"
+                  className="w-[500px] h-[287px] object-cover rounded-lg shadow-md"
                 />
               </div>
             </div>
           ))}
         </div>
-        {/* Footer */}
-        <div className="text-center mt-16">
-          {language === "tr" ? ( // Türkçe için
-             <p className="text-lg text-black dark:text-white leading-8">
-             Projelerinizde{" "}
-             <span className="underline decoration-[#82bbff] decoration-[6px] font-bold">
-               birlikte
-             </span>{" "}
-             çalışalım.
-           </p>
-          ) : (
-            // İngilizce için
-            <p className="text-3xl text-black dark:text-white leading-8">
-        Let’s{" "}
-        <span className="underline decoration-[#82bbff] decoration-[6px] font-bold">
-          work together
-        </span>{" "}
-        on your projects.
-      </p>
-          )}
-          {/* Linkler */}
-          <div className="mt-6 space-x-6">
+
+        <div className="mt-16 flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+          <div className="w-full md:w-auto md:mr-16">
+            {language === "tr-TR" ? (
+              <p className="font-inter font-medium text-[42px] leading-[63px] tracking-[0.01em] text-[#0A0A14] dark:text-white text-center md:text-left">
+                Projelerinizde{" "}
+                <span className="underline decoration-[#82bbff] decoration-[8px] font-bold">
+                  birlikte
+                </span>{" "}
+                çalışalım.
+              </p>
+            ) : (
+              <p className="font-inter font-medium text-[42px] leading-[63px] tracking-[0.01em] text-[#0A0A14] dark:text-white text-center md:text-left">
+                Let’s{" "}
+                <span className="underline decoration-[#82bbff] decoration-[6px] font-bold">
+                  work together
+                </span>{" "}
+                on your projects.
+              </p>
+            )}
+          </div>
+
+          <div className="flex flex-col items-center md:items-start space-y-0 mt-6 md:mt-0">
             <a
               href="https://github.com/serife-yildirim"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#1769ff] font-medium hover:underline"
+              className="font-inter font-medium text-[24px] leading-[36px] text-[#1769FF] hover:underline"
             >
               Github
             </a>
             <a
               href="#"
-              className="text-black dark:text-white font-medium hover:underline"
+              className="font-inter font-medium text-[24px] leading-[36px] text-[#0A0A14] dark:text-white hover:underline"
             >
               Personal Blog
             </a>
@@ -117,13 +111,13 @@ function Projects() {
               href="https://www.linkedin.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#499dc9] font-medium hover:underline"
+              className="font-inter font-medium text-[24px] leading-[36px] text-[#499dc9] hover:underline"
             >
-              LinkedIn
+              Linkedin
             </a>
             <a
               href="mailto:serifeozyurek-94@hotmail.com"
-              className="text-[#c5507b] font-medium hover:underline"
+              className="font-inter font-medium text-[24px] leading-[36px] text-[#c5507b] hover:underline"
             >
               Email
             </a>
