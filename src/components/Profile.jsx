@@ -20,7 +20,7 @@ export const Profile = () => {
 
         <div className="flex flex-wrap lg:flex-nowrap gap-5 md:gap-24 place-content-around">
           {/* Kişisel Bilgiler Kartı */}
-          <div className="my-auto max-w-lg rounded-2xl px-10 py-10 shadow-[10px_10px_2px_rgb(82,82,82)] bg-white dark:bg-[#2d3235]">
+          <div className="my-auto max-w-lg rounded-2xl px-10 py-10 shadow-[10px_10px_2px_rgb(82,82,82)] sm:mb-10 bg-white dark:bg-[#2d3235]">
             <h3 className="font-light mb-5 text-2xl font-playfair text-[#EA2678]">
               {localizedData.profile}
             </h3>
@@ -38,18 +38,23 @@ export const Profile = () => {
           </div>
 
           {/* Hakkımda */}
-          <div className="max-w-3xl flex flex-col gap-5">
-            <h3 className="font-playfair text-2xl font-light leading-8 text-black dark:text-white">
-              {localizedData.aboutTitle}
-            </h3>
-            <div className="w-[90px] h-[18px] bg-[#82BBFF] mb-4"></div>
-            <div className="text-lg font-light text-gray-800 dark:text-gray-300">
-              {localizedData.about}
-            </div>
-            <div className="text-lg font-light text-gray-800 dark:text-gray-300">
-              {localizedData.about2}
-            </div>
-          </div>
+<div className="max-w-3xl flex flex-col gap-4">
+  {/* About Me Başlık ve Çizgi */}
+  <div className="relative">
+    <h3 className="font-playfair text-2xl font-normal text-black dark:text-white relative z-10 -translate-y-2">
+      {localizedData.aboutTitle}
+    </h3>
+    <div className="w-[110px] h-[15px] bg-[#82BBFF] rounded-[3px] -translate-y-5 relative"></div>
+  </div>
+  {/* Hakkımda Metinleri */}
+  <div className="text-lg font-light text-gray-800 dark:text-gray-300">
+    {localizedData.about}
+  </div>
+  <div className="text-lg font-light text-gray-800 dark:text-gray-300">
+    {localizedData.about2}
+  </div>
+</div>
+
         </div>
       </div>
     </div>

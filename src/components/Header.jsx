@@ -8,11 +8,11 @@ const Header = () => {
     <div className="pt-5 relative pb-20 bg-gray-100 dark:bg-darkBackground px-9 lg:px-0">
       {/* Dekoratif öğeler */}
       <div
-        className="w-[13rem] bg-[#EA2678] h-[3.6875rem] absolute bottom-[5rem] right-[-5rem] rounded-[1.84375rem] opacity-90"
+        className="w-[13rem] bg-[#EA2678] h-[3.6875rem] absolute bottom-[5rem] sm:bottom-[6rem] right-[-5rem] rounded-[1.84375rem] opacity-90"
         aria-hidden="true"
       ></div>
       <div
-        className="w-[111px] h-[111px] top-[-4rem] left-[26rem] absolute bg-gray-300 dark:bg-darkBackground rounded-full"
+        className="w-[111px] h-[111px] top-[-4rem] left-[26rem] absolute bg-gray-300 dark:bg-[#525252] rounded-full"
         aria-hidden="true"
       ></div>
 
@@ -38,6 +38,8 @@ const Header = () => {
             <span>{darkMode ? "LIGHT MODE" : "DARK MODE"}</span>
           </button>
 
+          <div className="w-[6px] h-[18px] bg-[#777777]"></div>
+
           {/* Dil değiştirici */}
           <div className="flex items-center gap-1">
             <div className="text-[#EA2678] cursor-pointer" onClick={() => toggleLanguage("tr-TR")}>
@@ -56,15 +58,16 @@ const Header = () => {
         </div>
 
         {/* Header İçeriği */}
-        <div className="flex sm:ml-5 relative place-content-around mt-32 flex-wrap-reverse lg:flex-nowrap gap-5">
-          <article className="flex relative z-10 flex-col gap-5">
-            <div className="text-3xl font-normal leading-9 dark:text-darkText">
+        <div className="flex sm:ml-4 relative place-content-around mt-32 flex-wrap-reverse lg:flex-nowrap gap-3">
+          <article className="flex relative z-10 flex-col gap-5 mt-10 lg:ml-auto lg:pl-[25%]">
+            <div className="text-2xl font-normal leading-6 dark:text-darkText">
               {localizedData.greet}
             </div>
-            <div className="text-xl lg:text-[42px] max-w-3xl font-medium leading-[64px] z-20 dark:text-darkText">
+            <div className="text-xl lg:text-[35px] max-w-3xl font-medium sm:leading-[2] leading-[64px] z-20 dark:text-darkText">
               {localizedData.article}
             </div>
-            <div className="w-[148px] h-[35px] absolute top-[5.6rem] lg:top-[6rem] left-[-2rem] lg:left-0 rounded-[4px] bg-[#E92577]"></div>
+            <div className="sm:w-[90px] sm:h-[15px] sm:left-[0.2rem] sm:top-[4rem] lg:w-[160px] lg:h-[25px] absolute top-[5.6rem] lg:top-[5.2rem] left-[-2rem] lg:left-[375px]  rounded-[4px] bg-[#E92577]"></div>
+
             <div className="flex gap-5">
               {/* LinkedIn */}
               <a
@@ -111,21 +114,15 @@ const Header = () => {
               )}
             </div>
           </article>
-          <div className="relative max-w-96 max-h-96 overflow-hidden rounded-xl shadow-[#EA2678_-20px_-20px]">
-            <div className="absolute top-[-10px] left-[-10px] w-full h-full bg-[#EA2678] rounded-xl z-0"></div>
+          <div className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] overflow-hidden rounded-xl shadow-[#EA2678_-20px_-20px] mb-6 sm:left-[10px] sm:top-[10px] lg:left-[250px] lg:top-[120px]">
+            <div className="absolute top-[-30px] left-[-10px] w-full h-full bg-[#EA2678] rounded-xl z-0"></div>
             <img
               className="object-cover w-full h-full scale-110 relative z-10 rounded-xl border-[4px] border-[#EA2678]"
               src="/img.png"
               alt="Header Image"
             />
           </div>
-        </div>
-
-        {/* Ek Dekoratif Şekil */}
-        <div
-          className="w-[121px] h-[121px] border-[20px] border-gray-300 dark:border-darkBackground rounded-full absolute lg:right-[14rem] lg:bottom-[-9rem] sm:bottom-[-8rem] sm:right-[4rem] opacity-50"
-          aria-hidden="true"
-        ></div>
+        </div>  
       </div>
     </div>
   );
