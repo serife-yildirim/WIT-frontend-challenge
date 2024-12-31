@@ -15,10 +15,13 @@ const Skills = () => {
       >
         {localizedData.skill}
       </h2>
-            <div
-        className="absolute w-[181px] h-[49px] sm:top-[400px] lg:top-[230px] left-[-70px] bg-[#525252] dark:bg-[#525252] rounded-[29.5px]"
-        aria-hidden="true"
-      ></div>
+      <div
+  className="absolute w-[181px] h-[49px] top-[650px] sm:top-[650px] lg:top-[275px] left-[-70px] bg-[#525252] dark:bg-[#525252] rounded-[29.5px] translate-y-[30px]"
+  aria-hidden="true"
+></div>
+
+
+
       <div
   className="w-[121px] h-[121px] border-[20px] border-gray-300 dark:border-[#525252] bg-transparent dark:bg-darkBackground rounded-full absolute left-[80%] translate-x-[-70%] top-[-60px] opacity-50"
   aria-hidden="true"

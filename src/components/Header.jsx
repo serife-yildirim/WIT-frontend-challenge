@@ -73,7 +73,10 @@ const Header = () => {
             <div className="text-xl lg:text-[42px] max-w-3xl font-medium leading-[64px] z-20 dark:text-darkText">
               {localizedData.article}
             </div>
-            <div className="w-[148px] h-[31px] absolute top-[5.6rem] lg:top-[6rem] left-[-2rem] lg:left-0 rounded-[4px] bg-[#E92577]"></div>
+            <div
+              className="w-[80px] h-[16px] left-[0rem] sm:w-[110px] sm:h-[20px] sm:left-6 md:left-0 lg:w-[140px] lg:h-[24px] lg:left-0 bg-[#E92577] absolute top-[5.6rem] lg:top-[6rem] rounded-[3px]"
+            ></div>
+
             <div className="flex gap-5">
               {/* LinkedIn */}
               <a
