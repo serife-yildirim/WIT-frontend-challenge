@@ -19,20 +19,16 @@ const Header = () => {
       <div className="container relative">
         {/* Dil ve Tema Değiştirici */}
         <div
-          className="flex justify-end items-center gap-5 text-neutral-500 dark:text-darkText font-bold tracking-[0.1rem] text-base absolute"
-          style={{
-            top: "-130px", // Konumlandırma yukarıda
-            right: "100px", // Sağ kenar hizası
-          }}
+          className="absolute top-[-100px] right-[-10px] sm:right-[10px] lg:right-[50px] flex justify-end items-center gap-3 sm:gap-5 text-neutral-500 dark:text-darkText font-bold tracking-[0.1rem] text-sm sm:text-base"
         >
           {/* Tema Değiştirici */}
           <button
             onClick={toggleDarkMode}
-            className="flex items-center gap-2 text-[#EA2678] dark:text-darkText font-bold focus:outline-none"
+            className="flex items-center gap-1 sm:gap-2 text-[#EA2678] dark:text-darkText font-bold focus:outline-none"
             aria-label="Tema değiştir"
           >
             <div
-              className={`w-[36px] h-[18px] rounded-full flex items-center justify-${
+              className={`w-[30px] h-[15px] sm:w-[36px] sm:h-[18px] rounded-full flex items-center justify-${
                 darkMode ? "end" : "start"
               } p-1 transition-all duration-300 ${
                 darkMode ? "bg-[#000000]" : "bg-[#EA2678]"
@@ -40,15 +36,17 @@ const Header = () => {
             >
               {darkMode ? "🌙" : "☀️"}
             </div>
-            <span>{darkMode ? "LIGHT MODE" : "DARK MODE"}</span>
+            <span className="text-xs sm:text-base">
+              {darkMode ? "LIGHT MODE" : "DARK MODE"}
+            </span>
           </button>
 
           {/* Çizgi Ayracı */}
-          <div className="w-[1px] h-5 bg-gray-500"></div>
+          <div className="w-[1px] h-4 sm:h-5 bg-gray-500"></div>
 
           {/* Dil Değiştirici */}
           <div
-            className="text-[#EA2678] cursor-pointer flex items-center gap-1"
+            className="text-[#EA2678] cursor-pointer flex items-center gap-1 text-xs sm:text-base"
             onClick={() => toggleLanguage(language === "en-EN" ? "tr-TR" : "en-EN")}
           >
             {language === "en-EN" ? (
