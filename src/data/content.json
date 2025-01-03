@@ -26,15 +26,30 @@
       "projects": [
         {
           "name": "Witflix - Netflix Klon",
-          "vercelLink": "https://vercel.com/",
+          "vercelLink": "https://wit-frontend-challenge.vercel.app/",
           "gitLink": "https://github.com/serife-yildirim",
           "description": "Netflix'in profil seçimi, ana sayfası ve dizayn elemanlarının statik olarak HTML ve CSS ile tasarlanmasıdır.",
           "skill": ["html", "css", "responsive design"],
           "photoUrl": "/Witflix.png"
         },
         {
+          "name": "CV Projesi", 
+          "vercelLink": "https://wit-frontend-challenge.vercel.app/",
+          "gitLink": "https://github.com/serife-yildirim/WIT-frontend-challenge",
+          "description": "React ile dinamik ve component tabanlı olarak geliştirilmiştir. Veri işlemleri Axios ile yapılmış, tasarımı Figma'da kullanılmıştır.",
+          "skill": [
+            "html",
+            "javascript",
+            "tailwind css",
+            "react",
+            "hooks",
+            "axios"
+          ],
+          "photoUrl": "/CV.png" 
+        },
+        {
           "name": "Pizza Sipariş Sitesi",
-          "vercelLink": "https://vercel.com/",
+          "vercelLink": "https://wit-frontend-challenge.vercel.app/",
           "gitLink": "https://github.com/serife-yildirim",
           "description": "React ile dinamik şekilde yapılmış olup, Axios ile post işlemi gerçekleştirilmiştir. 3 componentten oluşan bir single page application yapısındadır.Form kısmında uygunluk validasyonları kontrol edilmekte ve veriler buna göre post edilmektedir.",
           "skill": [
@@ -78,15 +93,31 @@
       "projects": [
         {
           "name": "Witflix - Netflix Clone",
-          "vercelLink": "https://vercel.com/",
+          "vercelLink": "https://wit-frontend-challenge.vercel.app/",
           "gitLink": "https://github.com/serife-yildirim",
           "description": "The static design of Netflix’s profile selection, homepage, and design elements using HTML and CSS.",
           "skill": ["html", "css", "responsive design"],
           "photoUrl": "/Witflix.png"
         },
         {
+          "name": "CV Project", 
+          "vercelLink": "https://wit-frontend-challenge.vercel.app/",
+          "gitLink": "https://github.com/serife-yildirim/WIT-frontend-challenge",
+          "description": "It was developed dynamically and component-based with React. Data operations were handled using Axios, and the design was created in Figma.",
+          "skill": [
+            "html",
+            "javascript",
+            "tailwind css",
+            "react",
+            "hooks",
+            "axios"
+          ],
+          "photoUrl": "/CV.png" 
+        },
+        
+        {
           "name": "Pizza Order Website",
-          "vercelLink": "https://vercel.com/",
+          "vercelLink": "https://wit-frontend-challenge.vercel.app/",
           "gitLink": "https://github.com/serife-yildirim",
           "description": "A dynamic order page created for a pizza company. It is built with React and Axios to handle POST requests. It is a single-page application consisting of 3 components. Form validation checks the input before posting the data.",
           "skill": [

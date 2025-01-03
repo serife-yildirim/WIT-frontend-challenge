@@ -24,7 +24,7 @@ function Projects() {
         </div>
 
         {/* Proje Kartları */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {localizedData.projects.map((project, index) => (
             <div
               key={index}
