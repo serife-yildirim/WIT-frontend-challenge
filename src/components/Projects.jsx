@@ -15,7 +15,7 @@ function Projects() {
       <div className="w-full h-16 bg-white dark:bg-darkBackgroundAlt"></div>
 
       {/* Container */}
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-12">
         {/* Başlık */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-black dark:text-white">
@@ -24,7 +24,7 @@ function Projects() {
         </div>
 
         {/* Proje Kartları */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {localizedData.projects.map((project, index) => (
             <div
               key={index}
@@ -69,7 +69,7 @@ function Projects() {
               </div>
 
               {/* Proje Görseli */}
-              <div className="bg-white dark:bg-[#484148] flex justify-center items-center p-4">
+              <div className="bg-white dark:bg-[#484148] flex justify-center items-end p-4">
                 <img
                   src={project.photoUrl}
                   alt={project.name}

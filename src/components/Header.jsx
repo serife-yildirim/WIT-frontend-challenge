@@ -137,8 +137,8 @@ const Header = () => {
               )}
             </div>
           </article>
-          <div className="max-w-96 max-h-96 overflow-hidden rounded-xl shadow-[#EA2678_-20px_-20px]">
-            <img
+          <div className="max-w-96 max-h-96 overflow-hidden rounded-xl shadow-[#EA2678_-20px_-20px] relative mt-20"> 
+                  <img
               className="object-cover w-full h-full scale-110"
               src="/img.png"
               alt="Profile"
