@@ -117,8 +117,8 @@
         
         {
           "name": "Pizza Order Website",
-          "vercelLink": "https://wit-frontend-challenge.vercel.app/",
-          "gitLink": "https://github.com/serife-yildirim",
+          "vercelLink": "https://teknolojik-yemekler-pink.vercel.app/",
+          "gitLink": "https://github.com/serife-yildirim/WIT-pizza-project",
           "description": "A dynamic order page created for a pizza company. It is built with React and Axios to handle POST requests. It is a single-page application consisting of 3 components. Form validation checks the input before posting the data.",
           "skill": [
             "html",
