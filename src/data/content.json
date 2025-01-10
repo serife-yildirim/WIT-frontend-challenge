@@ -26,8 +26,8 @@
       "projects": [
         {
           "name": "Witflix - Netflix Klon",
-          "vercelLink": "https://wit-frontend-challenge.vercel.app/",
-          "gitLink": "https://github.com/serife-yildirim",
+          "vercelLink": "https://witflix-seven.vercel.app//",
+          "gitLink": "https://github.com/serife-yildirim/Witflix",
           "description": "Netflix'in profil seçimi, ana sayfası ve dizayn elemanlarının statik olarak HTML ve CSS ile tasarlanmasıdır.",
           "skill": ["html", "css", "responsive design"],
           "photoUrl": "/Witflix.png"
@@ -49,8 +49,8 @@
         },
         {
           "name": "Pizza Sipariş Sitesi",
-          "vercelLink": "https://wit-frontend-challenge.vercel.app/",
-          "gitLink": "https://github.com/serife-yildirim",
+          "vercelLink": "https://teknolojik-yemekler-pink.vercel.app/",
+          "gitLink": "https://github.com/serife-yildirim/WIT-pizza-project",
           "description": "React ile dinamik şekilde yapılmış olup, Axios ile post işlemi gerçekleştirilmiştir. 3 componentten oluşan bir single page application yapısındadır.Form kısmında uygunluk validasyonları kontrol edilmekte ve veriler buna göre post edilmektedir.",
           "skill": [
             "html",
@@ -93,8 +93,8 @@
       "projects": [
         {
           "name": "Witflix - Netflix Clone",
-          "vercelLink": "https://wit-frontend-challenge.vercel.app/",
-          "gitLink": "https://github.com/serife-yildirim",
+          "vercelLink": "https://witflix-seven.vercel.app/",
+          "gitLink": "https://github.com/serife-yildirim/Witflix",
           "description": "The static design of Netflix’s profile selection, homepage, and design elements using HTML and CSS.",
           "skill": ["html", "css", "responsive design"],
           "photoUrl": "/Witflix.png"

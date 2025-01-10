@@ -69,13 +69,16 @@ function Projects() {
               </div>
 
               {/* Proje Görseli */}
-              <div className="bg-white dark:bg-[#484148] flex justify-center items-end p-4">
-                <img
-                  src={project.photoUrl}
-                  alt={project.name}
-                  className="w-[500px] h-[287px] object-cover rounded-lg"
-                />
-              </div>
+<div className="bg-white dark:bg-[#484148] flex justify-center items-end p-4">
+  <a href="https://teknolojik-yemekler-pink.vercel.app/" target="_blank" rel="noopener noreferrer">
+    <img
+      src={project.photoUrl}
+      alt={project.name}
+      className="w-[500px] h-[287px] object-cover rounded-lg"
+    />
+  </a>
+</div>
+
             </div>
           ))}
         </div>
